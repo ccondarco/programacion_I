@@ -2,7 +2,7 @@
 // Autor: Ana Cecilia Condarco Troncoso
 // Carnet: 6142435 L.P.
 // Carrera del estudiante: Diseño Digital
-// Fecha creación: 04/09/2025
+// Fecha creación: 05/09/2025
 // Número de ejercicio: 7
 
 #include <iostream>
@@ -42,4 +42,5 @@ int main()
 
     cout << "La cantidad de pañales diarios que se consume es: " << total_panales;
     return 0;
+
 }
