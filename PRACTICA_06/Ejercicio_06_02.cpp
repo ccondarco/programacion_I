@@ -45,7 +45,7 @@ void buscar_mineral(vector<string> minerales, vector<double> produccion)
         }
     }
     
-    if (mineral_encontrado = false)
+    if (mineral_encontrado == false)
     // Si no se encuentra ninguna coincidencia, se notifica al usuario
     {
         cout << "Mineral no encontrado." << endl;
@@ -83,4 +83,5 @@ void mayor_a_menor(vector<string> minerales, vector<double> produccion)
     {
         cout << minerales_ordenados[i] << " \t " << produccion_ordenada[i] << endl;
     }
+
 }
