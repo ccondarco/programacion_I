@@ -14,6 +14,8 @@ void mostrar_matriz(char matriz[3][4]);
 int filas_libres(char matriz[3][4]);
 int columnas_libres(char matriz[3][4]);
 vector<pair<int, int>> coordenadas(char matriz[3][4]);
+int cantidad_de_muertos(char matriz[3][4]);
+int muertos_primera_columna(char matriz[3][4]);
 
 int main()
 {
@@ -26,6 +28,8 @@ int main()
     int filas_sin_muertos;
     int columnas_sin_muertos;
     vector<pair<int, int>> muertos_vivientes;
+    int cantidad_total_muertos;
+    int muertos_columna_1;
     
     cout << "a) Matriz" << endl;
     mostrar_matriz(matriz);
@@ -47,8 +51,20 @@ int main()
     cout << endl;
     
     cout << "d) Cantidad de muertos vivientes" << endl;
+    cantidad_total_muertos = cantidad_de_muertos(matriz);
+    cout << "Existen " << cantidad_total_muertos << " muertos vivientes en el complejo." << endl;
+    cout << endl;
 
     cout << "e) Posibilidad de entrar al complejo" << endl;
+    muertos_columna_1 = muertos_primera_columna(matriz);
+    cout << "Existen " << muertos_columna_1 << " muerto(s) viviente(s) en la primera columna. ";
+    if(muertos_columna_1 <= 2)
+    {
+        cout << "Es posible entrar al complejo." << endl;
+    }
+    else {
+        cout << "No es posible entrar al complejo." << endl;
+    }
 
     return 0;
 }
@@ -130,3 +146,33 @@ vector<pair<int, int>> coordenadas(char matriz[3][4])
     return muertos_vivientes;
 }
 
+int cantidad_de_muertos(char matriz[3][4])
+{
+    int muertos_vivientes = 0;
+    
+    for(int i = 0; i < 3; i++)
+    {
+        for(int j = 0; j < 4; j++)
+        {
+            if(matriz[i][j] == 'x')
+            {
+                muertos_vivientes = muertos_vivientes + 1;
+            }
+        }
+    }
+    return muertos_vivientes;
+}
+
+int muertos_primera_columna(char matriz[3][4])
+{    
+    int muertos_vivientes = 0;
+
+    for(int i = 0; i < 3;i++)
+    {
+        if(matriz[i][0] == 'x')
+        {
+            muertos_vivientes = muertos_vivientes + 1;
+        }
+    }
+    return muertos_vivientes;
+}
