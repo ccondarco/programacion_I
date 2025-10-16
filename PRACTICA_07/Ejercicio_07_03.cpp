@@ -47,6 +47,7 @@ int main()
     for (int i = 0; i < muertos_vivientes.size(); i++)
     {
         cout << "[" << muertos_vivientes[i].first << "][" << muertos_vivientes[i].second << "]" << endl;
+        // En este vector de pares .first representa las filas y .second representa las columnas.
     }
     cout << endl;
     
