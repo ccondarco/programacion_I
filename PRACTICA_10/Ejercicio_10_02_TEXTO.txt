@@ -1,0 +1,4 @@
+¿Qué es una struct?
+Un conjunto de variables agrupadas bajo un mismo nombre.
+Para que sirve.
+Organizar datos complejos que arrays o variables simples no pueden.

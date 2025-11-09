@@ -1,0 +1,24 @@
+DECLARACION Y DEFINICION DE ESTRUCTURAS
+
+Sintaxis basica
+Palabra clave struct, nombre y llaves con miembros declarados.
+
+Ejemplos clasicos
+	Punto (x,y)
+	Fecha (dia, mes, año)
+	Estudiante (nombre, edad, nota)
+
+Buenas practicas
+Usar sangrias, nombres claros y comentar los campos que sean necesarios.
+No utilizar el tipo de campo STRING
+
+DECLARACION E INICIALIZACION DE VARIABLES STRUCT
+
+Variables individuales
+Declarar variables específicas de tipo struct.
+
+Ambito
+Diferenciar variables locales, globales y estaticas.
+
+Inicializacion
+Asignar valores al declararlas para evitar datos basura
