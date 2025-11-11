@@ -21,7 +21,7 @@ struct Datos_estudiante
 
 Datos_estudiante ingresar_datos_estudiante();
 void ingresar_datos(vector<Datos_estudiante>& estudiantes, int cantidad);
-void desplegar_datos_estudiante(Datos_estudiante estudiante);
+void desplegar_datos_estudiante(vector<Datos_estudiante> estudiantes);
 void crear_archivo_txt(vector<Datos_estudiante> estudiantes);
 void leer_archivo_txt();
 
@@ -41,13 +41,6 @@ int main()
     leer_archivo_txt();
     
     return 0;
-}
-
-void numeros_aleatorios(int minimo, int maximo)
-{
-    int numero_aleatorio;
-
-    numero_aleatorio = (rand() % (maximo - minimo + 1)) + minimo;
 }
 
 Datos_estudiante ingresar_datos_estudiante()
@@ -84,8 +77,6 @@ void desplegar_datos_estudiante(vector<Datos_estudiante> estudiantes)
         cout << "\t Promedio de notas recibidas: " << estudiantes[i].promedio << endl;
         cout << "=======================================" << endl;
     }
-    
-    
 }
 
 void crear_archivo_txt(vector<Datos_estudiante> estudiantes)
@@ -95,6 +86,7 @@ void crear_archivo_txt(vector<Datos_estudiante> estudiantes)
     
     archivo_estudiantes << "ESTUDIANTES REGISTRADOS" << endl;
     for (int i = 0; i < estudiantes.size(); i++)
+    // Se escribe cada registro en el archivo.
     {
         archivo_estudiantes << "================================================" << endl;
         archivo_estudiantes << "\t Nombre del estudiante: " << estudiantes[i].nombre << endl;
@@ -107,12 +99,14 @@ void crear_archivo_txt(vector<Datos_estudiante> estudiantes)
 }
 
 void leer_archivo_txt()
+// Se abre el archivo de texto y muestra su contenido línea por línea.
 {
     ifstream archivo_estudiantes;
     string texto;
 
     archivo_estudiantes.open("ESTUDIANTES.TXT");
     while (getline(archivo_estudiantes, texto))
+    // Se muestra todo el contenido del archivo generado anteriormente.
     {
         cout << texto << endl;
     }
