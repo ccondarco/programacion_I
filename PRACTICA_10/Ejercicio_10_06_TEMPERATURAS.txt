@@ -1,0 +1,9 @@
+La Paz 8.7
+Cochabamba 17.3
+Santa Cruz 21.5
+Pando 15.3
+Beni 24.2
+Oruro 10.7
+Potosí 6.6
+Chuquisaca 17.3
+Tarija 15.1

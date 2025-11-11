@@ -1,0 +1,3 @@
+¿QUÉ ES RECURSION?
+La recursión es un concepto fundamental en matemáticas e informática. La definición más sencilla es que un programa recursivo es aquel que se llama a sí mismo.
+Otro ingrediente esencial de la definición es que debe contener una condición de terminación que autoriza al programa a dejar de llamarse a sí mismo
