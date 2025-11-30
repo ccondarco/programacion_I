@@ -1,0 +1,2 @@
+1234; Flavia Revollo; 88; 2
+9876; Camila Rinaldo; 77; 0
